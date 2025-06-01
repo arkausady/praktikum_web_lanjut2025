@@ -9,14 +9,18 @@ use App\Http\Controllers\AdminController;
 //     return view('welcome');
 // });
 
-Route::get('/', [ProductController::class, 'index']);
-Route::get('/product/{id}', [ProductController::class, 'show']);
+// Route::get('/', [ProductController::class, 'index']);
+// Route::get('/product/{id}', [ProductController::class, 'show']);
 
 
 
-Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
-Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
+// Route::get('/user/create', [UserController::class, 'create'])->name('user.create');
+// Route::post('/user/store', [UserController::class, 'store'])->name('user.store');
 
 
-Route::get('/admin/create', [AdminController::class, 'create']);
-Route::post('/admin/store', [AdminController::class, 'store']);
+// Route::get('/admin/create', [AdminController::class, 'create']);
+// Route::post('/admin/store', [AdminController::class, 'store']);
+
+Route::get('/', function () {
+    return view('home');
+});
